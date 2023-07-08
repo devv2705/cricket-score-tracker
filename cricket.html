@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criket Score Keeper</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/dev.css">
+    
+
+</head>
+
+<body >
+    <div class="rectangle" id="ipl">
+        <img src="data:image/jpeg;base64,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W59g+JqZsxL22LSB25RvsAb7QJMlulTCgKoAAFgAAAB1AS5Mics0rlqKsrFYiJydCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAUiJg6U0gmGpPWqtlRFLE/YBxJOwDrhahuxzHKVp84XDinTcrVrEqpU2ZVG13HSOhQfjdUhabHT+mKmNrNWqbCeai9CICcqDx2npJM1xmvh6XTh6lScszEvYXCvVdUpoXdjlVVFyT+Xadgmbo/QOIrulNKTBnVnTygKKVW2ZgWG0DMN194kw6m6pJgEzNZ67Czv0Ae8S+5eveenoAVsRGC5Z5GDkyzqVqamBXylSz4hhtbeqA70T823ns2TsIiZMpObu9y2kkrIrERPD0REQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAPkyEtZ6+N0lVqslOpUw9Kq9NVRSUGQkZrDa7Ebb7bX6JNpnB4EY7R71aVPBDEUXr1a9N0qIjAVGLZWDnovaTUZZW2kr+pxNX0Ig8m2bJlbPcLlsc2Y7AuXfe/RJh1Z1Co08Oy4tA9WquV/iA7QiHoI2EsN5HACfWhtCVK2PfG4rC+RsiCmpqI5zi6s5yE7ctgP7t3JktfEuSSjpycU6aWrON1Z0Ni6NZRiij06FCpQo1QTndaj0yM6ncVWmB3zsoiVW23dkqVisRE8PRERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAP//Z" alt="IPL">
+    </div>
+    <div class="container" id="main">
+        <h1 class="text-center mt-4" style="font-size: 2em;">Indian Premier League</h1>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h2>Gujarat Titan</h2>
+                <h3>Overs: <span id="GTOvers">0.0</span></h3>
+                <h4>Score: <span id="GT">0-0</span></h4>
+            </div>
+            <div class="col-md-6">
+                <h2>Chennai Super Kings</h2>
+                <h3>Overs: <span id="CSKOvers">0.0</span></h3>
+                <h4>Score: <span id="CSK">0-0</span></h4>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <h3>Add Runs</h3>
+                <button class="btn btn-primary" onclick="updateScore(1); updateOver()">1 Run</button>
+                <button class="btn btn-primary" onclick="updateScore(2); updateOver()">2 Runs</button>
+                <button class="btn btn-primary" onclick="updateScore(3); updateOver()">3 Runs</button>
+                <button class="btn btn-primary" onclick="updateScore(4); updateOver()">4 Runs</button>
+                <button class="btn btn-primary" onclick="updateScore(6); updateOver()">6 Runs</button>
+                <button class="btn btn-primary" onclick="updateScore(0); updateOver()">0 Runs</button>
+                <button class="btn btn-danger" onclick="updateWickets(); updateOver()">Wicket</button>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <span id="result"></span>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let GT = 0;
+    let GTWickets = 0;
+    let CSK = 0;
+    let CSKWickets = 0;
+    let currentTeam = 'A';
+    let GTOvers = 0.0;
+    let CSKOvers = 0.0;
+    let balls = 0;
+    function updateScore(runs) {
+        if (currentTeam === 'A' && GTWickets < 10) {
+            GT += runs;
+            document.querySelector('#GT').textContent = `${GT}-${GTWickets}`;
+        } else if (currentTeam === 'B') {
+            CSK += runs;
+            document.querySelector('#CSK').textContent = `${CSK}-${CSKWickets}`;
+            checkWinner();
+        }
+    }
+    function updateWickets() {
+        if (currentTeam == 'A') {
+            GTWickets++;
+            document.querySelector('#GT').textContent = `${GT}-${GTWickets}`;
+            if (GTWickets >= 10) {
+                balls = -1;
+                currentTeam = 'B';
+            }
+        } else {
+            CSKWickets++;
+            document.querySelector('#CSK').textContent = `${CSK}-${CSKWickets}`;
+            checkWinner();
+        }
+    }
+    function checkWinner() {
+        if (CSK > GT && CSKWickets <= 10) {
+            document.querySelector('#result').textContent = 'CSK Wins';
+            let buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.disabled = true;
+            });
+        }else if(CSK < GT && (CSKWickets >= 10 || CSKOvers >= 20)) {
+            document.querySelector('#result').textContent = 'GT Wins';
+            let buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.disabled = true;
+            });
+        }
+    }
+    function updateOver(){
+        if(currentTeam == 'A'){
+            balls++;
+            if(balls >= 6){
+                GTOvers++;
+                balls=0;
+            }
+            document.querySelector('#GTOvers').textContent = `${GTOvers}.${balls}`;
+            if(GTOvers == 20){
+                    balls = 0;
+                    currentTeam = 'B';
+            }
+        }if(currentTeam == 'B'){
+            balls++;
+            if(balls >= 6){
+                CSKOvers++;
+                balls=0;
+            }
+            document.querySelector('#CSKOvers').textContent = `${CSKOvers}.${balls}`;
+            if(CSKOvers == 20){
+                checkWinner();
+            }
+        }
+    }
+
+</script>
+</html>
